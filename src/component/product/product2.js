@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import _ from "lodash";
 import Carousel from "./carousel";
-import Placeholder from "../Placeholder";
+
 import CurrencyFormat from "react-currency-format";
 export default function Product2(props) {
   const { dataProduct } = props.data;
@@ -12,7 +12,7 @@ export default function Product2(props) {
       ),
       []
     );
-
+  const data = chunk(dataProduct, 4);
   const componentSale = (oPrice, price, fontSize) =>
     oPrice !== price && oPrice !== 0 && price !== 0 ? (
       <div className="sale-big-product" style={{ fontSize: fontSize }}>
@@ -105,15 +105,7 @@ export default function Product2(props) {
       clearInterval(time);
     };
   }, []);
-  // const [loadPage, setLoadPage] = useState(false);
-  // useEffect(() => {
-  //   setLoadPage(true);
-  //   setTimeout(() => {
-  //     setLoadPage(false);
-  //   }, 5000);
-  // }, []);
-  const data = chunk(dataProduct, 4);
-  console.log(data[2]);
+
   const [index, setIndex] = useState(0);
   return (
     <>

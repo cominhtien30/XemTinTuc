@@ -26,6 +26,7 @@ export default function Tab(props) {
       return 0;
     }
   };
+
   const [showTab, setShowTag] = useState(0);
 
   useEffect(() => {
@@ -142,14 +143,15 @@ export default function Tab(props) {
           : !showNav &&
             !intro && (
               <IconChooseProduct
-                listPages={listPageProducts}
+                listTabs={listTabs}
+                listPageProducts={listPageProducts}
                 showChooseProduct={showChooseProduct}
                 showChooseProductHandle={showChooseProductHandle}
                 hideTagHandle={hideTagHandle}
               />
             )}
         {loadPage ? (
-          <Placeholder />
+          <Placeholder index={index} />
         ) : (
           <RouterTab listPages={listPageProducts} listTags={listTabs} />
         )}

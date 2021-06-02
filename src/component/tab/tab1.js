@@ -1,10 +1,12 @@
 import React from "react";
 import _ from "lodash";
 import { Route, Link } from "react-router-dom";
+
 import "../../styles.css";
+// import data from "../data";
 export default function Tab1(props) {
   const { data } = props;
-  console.log(data);
+
   return (
     <>
       <div

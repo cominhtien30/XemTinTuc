@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./iconAdd.css";
 import { Route, Link, useHistory } from "react-router-dom";
 
 export default function IconCHooseProduct(props) {
-  const { listPages } = props;
+  const { listPageProducts } = props;
 
   const history = useHistory();
   const showChooseProductHandle = () => {
@@ -22,7 +22,7 @@ export default function IconCHooseProduct(props) {
       <div className="icon-add" onClick={showChooseProductHandle}>
         <i className="fas fa-plus" />
       </div>
-      {listPages.map((item, index) => {
+      {listPageProducts.map((item, index) => {
         return (
           <div
             key={index}
