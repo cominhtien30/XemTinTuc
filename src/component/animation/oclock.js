@@ -22,7 +22,7 @@ export default function Oclock(props) {
     <>
       <figure className="oclock">
         <div className="face top">
-          <p id="s">{s}</p>
+          <p id="s">{s.slice(0, -2)}</p>
         </div>
         <div className="face front">
           <p id="m">{m}</p>
